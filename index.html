@@ -1,111 +1,678 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang="en">
 <head>
-<meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
-<b:if cond='data:blog.isMobile'>
-<meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
-<b:else/>
-<meta content='width=1100' name='viewport'/>
-</b:if>
-<b:include data='blog' name='all-head-content'/>
-<title>PHẦN MỀM</title>
-<b:skin><![CDATA[/*
------------------------------------------------
-////////////////////////PHÁT TRIỂN BỞI ĐỨC NGUYỄN////////////////////////////////////////////////////////////
-----------------------------------------------
-]]></b:skin>
+    <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>PHẦN MỀM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<script type='text/javascript'>
+//<![CDATA[
+// JavaScript Document
+var message="NoRightClicking"; function defeatIE() {if (document.all) {(message);return false;}} function defeatNS(e) {if (document.layers||(document.getElementById&&!document.all)) { if (e.which==2||e.which==3) {(message);return false;}}} if (document.layers) {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;} else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;} document.oncontextmenu=new Function("return false")
+//]]>
+</script>
+
+<style type='text/css'>
+body{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;}
+</style>
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js'/>
+<script type='text/javascript'>
+checkCtrl=false $(&#39;*&#39;).keydown(function(e){
+if(e.keyCode==&#39;17&#39;){ checkCtrl=false  } }).keyup(function(ev){
+if(ev.keyCode==&#39;17&#39;){ checkCtrl=false } }).keydown(function(event){
+if(checkCtrl){
+if(event.keyCode==&#39;85&#39;){ return false; } } })
+</script>
 
 
-       
+<script type='text/javascript'>
+//<![CDATA[
+shortcut={all_shortcuts:{},add:function(a,b,c){var d={type:"keydown",propagate:!1,disable_in_input:!1,target:document,keycode:!1};if(c)for(var e in d)"undefined"==typeof c[e]&&(c[e]=d[e]);else c=d;d=c.target,"string"==typeof c.target&&(d=document.getElementById(c.target)),a=a.toLowerCase(),e=function(d){d=d||window.event;if(c.disable_in_input){var e;d.target?e=d.target:d.srcElement&&(e=d.srcElement),3==e.nodeType&&(e=e.parentNode);if("INPUT"==e.tagName||"TEXTAREA"==e.tagName)return}d.keyCode?code=d.keyCode:d.which&&(code=d.which),e=String.fromCharCode(code).toLowerCase(),188==code&&(e=","),190==code&&(e=".");var f=a.split("+"),g=0,h={"`":"~",1:"!",2:"@",3:"#",4:"$",5:"%",6:"^",7:"&",8:"*",9:"(",0:")","-":"_","=":"+",";":":","'":'"',",":"<",".":">","/":"?","\\":"|"},i={esc:27,escape:27,tab:9,space:32,"return":13,enter:13,backspace:8,scrolllock:145,scroll_lock:145,scroll:145,capslock:20,caps_lock:20,caps:20,numlock:144,num_lock:144,num:144,pause:19,"break":19,insert:45,home:36,"delete":46,end:35,pageup:33,page_up:33,pu:33,pagedown:34,page_down:34,pd:34,left:37,up:38,right:39,down:40,f1:112,f2:113,f3:114,f4:115,f5:116,f6:117,f7:118,f8:119,f9:120,f10:121,f11:122,f12:123},j=!1,l=!1,m=!1,n=!1,o=!1,p=!1,q=!1,r=!1;d.ctrlKey&&(n=!0),d.shiftKey&&(l=!0),d.altKey&&(p=!0),d.metaKey&&(r=!0);for(var s=0;k=f[s],s<f.length;s++)"ctrl"==k||"control"==k?(g++,m=!0):"shift"==k?(g++,j=!0):"alt"==k?(g++,o=!0):"meta"==k?(g++,q=!0):1<k.length?i[k]==code&&g++:c.keycode?c.keycode==code&&g++:e==k?g++:h[e]&&d.shiftKey&&(e=h[e],e==k&&g++);if(g==f.length&&n==m&&l==j&&p==o&&r==q&&(b(d),!c.propagate))return d.cancelBubble=!0,d.returnValue=!1,d.stopPropagation&&(d.stopPropagation(),d.preventDefault()),!1},this.all_shortcuts[a]={callback:e,target:d,event:c.type},d.addEventListener?d.addEventListener(c.type,e,!1):d.attachEvent?d.attachEvent("on"+c.type,e):d["on"+c.type]=e},remove:function(a){var a=a.toLowerCase(),b=this.all_shortcuts[a];delete this.all_shortcuts[a];if(b){var a=b.event,c=b.target,b=b.callback;c.detachEvent?c.detachEvent("on"+a,b):c.removeEventListener?c.removeEventListener(a,b,!1):c["on"+a]=!1}}},shortcut.add("Ctrl+U",function(){top.location.href="https://www.facebook.com/ducnguyen5802/"}),shortcut.add("F12",function(){top.location.href="https://www.facebook.com/ducnguyen5802/"}),shortcut.add("Ctrl+Shift+I",function(){top.location.href="https://www.facebook.com/ducnguyen5802/"}),shortcut.add("Ctrl+S",function(){top.location.href="https://www.facebook.com/ducnguyen5802/"}),shortcut.add("Ctrl+Shift+C",function(){top.location.href="https://www.facebook.com/ducnguyen5802/"});
+//]]>
+</script>
+
 </head>
+<body onkeydown="return false">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <h5 class="card-title">LƯU TRỮ <span class="text-muted fw-normal ms-2">(18 FILE)</span></h5>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
+                <div>
+                    <ul class="nav nav-pills">
+                        
+                    </ul>
+                </div>
+                <div>
+                </div>
+                <div class="dropdown">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="">
+                <div class="table-responsive">
+                    <table class="table project-list-table table-nowrap align-middle table-borderless">
+                        <thead>
+                            <tr>
+                                <th align="center" scope="col" class="ps-4" style="width: 50px;">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck" /><label class="form-check-label" for="contacusercheck"></label></div>
+                                </th>
+                                <th scope="col">Tên File</th>
+                                <th scope="col">Chuyên Mục</th>
+                                <th scope="col">Tải Lên Bởi</th>
+                                <th scope="col">Kích Thước</th>
+                                <th scope="col" style="width: 200px;">Hành Động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck1" /><label class="form-check-label" for="contacusercheck1"></label></div>
+                                </th>
+                                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/1200px-Visual_Studio_Icon_2019.svg.png" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">Visual Studio 2013 64bit</a></td>
+                                <td><span class="badge badge-soft-success mb-0">VISUAL STUDIO</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>5 GB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+                                        </li>
+                                        <li class="list-inline-item">
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1OO1iBvDTYQObi9MmOLGYkq2wsIB--qVi/view" target="_blank">TẢI</a><a class="dropdown-item" href="#">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/1200px-Visual_Studio_Icon_2019.svg.png" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">Visual Studio 2012 64 bit</a></td>
+                                <td><span class="badge badge-soft-success mb-0">VISUAL STUDIO</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>1 GB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1LAffZG8lNf7NQXmWj_UJx-U2QWnoNHcv/view" target="_blank">TẢI</a><a class="dropdown-item" href="https://apkadmin.com/x4n5p9xd2itw/Visual_Studio_2012_Ultimate_Setup.zip.html" target="_blank">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">Visual Studio Code ( win 7 )</a></td>
+                                <td><span class="badge badge-soft-success mb-0">VISUAL STUDIO</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>50 MB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1tJOUrx7GC51NP181n2HlJ-ZTTf3zyDDb/view" target="_blank">TẢI</a><a class="dropdown-item" href="#">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://csm.vcdn.vn//csmboot/skin/mainsite-10-14/images/img_csmboot_2.1.png" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">CSM BOOT SERVER</a></td>
+                                <td><span class="badge badge-soft-danger mb-0">CSM VNG</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>1 GB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1vBoJqQONu0NWsMoG2Q0IeYok5quEIko0/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://csm.vcdn.vn/csm/skin/csm_v4/images/disc_csmboot.png" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">CSM BOOT CLIENT</a></td>
+                                <td><span class="badge badge-soft-danger mb-0">CSM VNG</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>70 MB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1yiJALoLyatre2i5w2B6Mqk5k20Ax0VbT/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://csm.vcdn.vn/csm/skin/csm_v4/images/disc_csmclick.png" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">CSM CLICK</a></td>
+                                <td><span class="badge badge-soft-danger mb-0">CSM VNG</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>13 MB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://mega.nz/file/Rv50SDIJ#bp3lY1NpUdOoUxbbEe813ILTb9LkErveKx3jdRRANhs" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://csm.vcdn.vn/csm/skin/csm_v4/images/disc_csmbilling.png" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">CSM BILLING ( TÍNH TIỀN )</a></td>
+                                <td><span class="badge badge-soft-danger mb-0">CSM VNG</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>382 MB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1E8CSSfeuUpWNx-KvBWOIS6TZmZo1xaxi/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://oktot.net/wp-content/uploads/2016/04/image003-17.png" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">TMG 2010</a></td>
+                                <td><span class="badge badge-soft-danger mb-0">FIREWALL ( TƯỜNG LỬA )</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>1 GB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/130I2GufSsEzZVmv1fOFteH-HPUG5NJtm/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9gCNevj9mJxeaSZt2ondkHhVDUu6t9haQMZDyfykuoIG5xn3vUfgZ4_9LUy4Kil3_r1M&usqp=CAU" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">Mdaemon Server 10.1</a></td>
+                                <td><span class="badge badge-soft-success mb-0">MAIL SERVER</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>47 MB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://apkadmin.com/3voki5lkfnb3/Mdaemon_Server_Full.zip.html" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://keytot.vn/wp-content/uploads/2022/01/key-Win-7-Pro-keytotvn.jpg" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">Win7 Pro 32bit</a></td>
+                                <td><span class="badge badge-soft-primary mb-0">WINDOWS</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>2 GB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1ymXb60D0xAsVMNDAz-DinxmqeMDQVWbD/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://keytot.vn/wp-content/uploads/2022/01/key-Win-7-Pro-keytotvn.jpg" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">WIN7 Pro 64bit</a></td>
+                                <td><span class="badge badge-soft-primary mb-0">WINDOWS</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>3 GB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1f7Q2x9rFgElqrnuPQQF44AxfVnzqO402/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">.NET Framework ( DOT NET )</a></td>
+                                <td><span class="badge badge-soft-success mb-0">.NET FRAMEWORK</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>48 MB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1_vrtePeCennvnxKc1ShDLvH_lGw2y2Xo/view " target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://ngukiemphithien.com/wp-content/uploads/2019/08/easy-driver-pack.jpg" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">THÊM DRIVER VÀO USB</a></td>
+                                <td><span class="badge badge-soft-info mb-0">DRIVER</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>28 MB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1EACOEp_mz3ekjbAvBjsruTsAi30ED5m6/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://ngukiemphithien.com/wp-content/uploads/2019/08/easy-driver-pack.jpg" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">Wan Driver 6 Win7 64bit</a></td>
+                                <td><span class="badge badge-soft-info mb-0">DRIVER</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>1 GB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1J375kxstIE7Qa1_gBWxC92gQJp1Nh9a-/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://ngukiemphithien.com/wp-content/uploads/2019/08/easy-driver-pack.jpg" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">Wan Driver 6 Win 7 32bit</a></td>
+                                <td><span class="badge badge-soft-info mb-0">DRIVER</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>1 GB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1lYddNHvBlzFawdFi79pPJ_y6V5hr1DYg/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://ngukiemphithien.com/wp-content/uploads/2019/08/easy-driver-pack.jpg" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">Wan Driver 7 Win 10 32bit </a></td>
+                                <td><span class="badge badge-soft-info mb-0">DRIVER</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>1 GB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1ZkXRyWgTHF6bfpO333S6d3OYYQ0qdi07/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://ngukiemphithien.com/wp-content/uploads/2019/08/easy-driver-pack.jpg" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">Wan Driver 7 Win 10 64 bit</a></td>
+                                <td><span class="badge badge-soft-info mb-0">DRIVER</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>2 GB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1x_Racxl9DQFpmlLHmofK2wDLyDGGpE1h/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+							
+							<tr>
+                                <th scope="row" class="ps-4">
+                                    <div class="form-check font-size-16"><input type="checkbox" class="form-check-input" id="contacusercheck2" /><label class="form-check-label" for="contacusercheck2"></label></div>
+                                </th>
+                                <td><img src="https://upload.wikimedia.org/wikipedia/vi/thumb/c/cf/Microsoft_Office_2010.svg/1200px-Microsoft_Office_2010.svg.png" alt="" class="avatar-sm rounded-circle me-2" /><a href="#" class="text-body">OFFICE 2010</a></td>
+                                <td><span class="badge badge-soft-primary mb-0">MICROSOFT OFFICE</span></td>
+                                <td>Đức Nguyễn</td>
+                                <td>706 MB</td>
+                                <td>
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item">
+ 
+                                        </li>
+                                        <li class="list-inline-item dropdown">
+                                            <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"><i class="bx bx-dots-vertical-rounded"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <a class="dropdown-item" href="https://drive.google.com/file/d/1tmaoOWedZJxC9tObXlIgYv53DwTqFbAU/view" target="_blank">TẢI</a><a class="dropdown-item" href=" ">DỰ PHÒNG</a><a class="dropdown-item" href="https://www.facebook.com/ducnguyen5802/" target="_blank">BÁO FILE LỖI</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-0 align-items-center pb-4">
+        <div class="col-sm-6">
+            <div><p class="mb-sm-0">© 2022 | Tạo Bởi<b><span style="color: red; font-family: arial;"><a href="https://www.facebook.com/ducnguyen5802/" target="_blank">&nbsp;Đức Nguyễn</a></span></b></p></div>
+        </div>
+        <div class="col-sm-6">
+            <div class="float-sm-end">
+                <ul class="pagination mb-sm-0">
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
-<body>
-  <h3 id='gioi' style=' box-shadow:#;background-color: #;  color: #76cc9c; font-family: &quot;Open Sans&quot;, sans-serif; font-size: 1.75rem; font-weight: 500; line-height: 1.2; margin-bottom: 0.5rem; margin-top: 0px;  text-align: center;'>Lưu<span style=' color: #e4664f;'> Trữ</span></h3>
+<style type="text/css">
+body{margin-top:20px;
+background-color:#eee;
+}
+.project-list-table {
+    border-collapse: separate;
+    border-spacing: 0 12px
+}
 
-    
+.project-list-table tr {
+    background-color: #fff
+}
 
-    <div id='ten' style=' text-align: center;'><!--  #0dccd5 xanh dương nhạt --> 
-        <p style='box-sizing: border-box; color: #0dccd5; display: inline-block; font-size: 24pt; font-weight: 700; line-height: 1; margin-bottom: 0px; margin-top: 6px; padding-bottom: 5px; padding-right: 10px; position: relative; transition: all 0.4s ease 0s;'>
-          <span style='box-sizing: border-box; font-weight: 300;'>Phần Mềm </span></p></div>
-   
-<p style='text-align: center;'>
-  Visual Studio 2013 x64:
-  <a href='https://drive.google.com/file/d/1OO1iBvDTYQObi9MmOLGYkq2wsIB--qVi/view' target='_blank'>TẢI</a>
-</p>
-       
-<p style='text-align: center;'>
-  Visual Studio2012 x64 :
-  <a href='https://drive.google.com/file/d/1LAffZG8lNf7NQXmWj_UJx-U2QWnoNHcv/view' target='_blank'>TẢI  </a>----
-    <a href='https://apkadmin.com/x4n5p9xd2itw/Visual_Studio_2012_Ultimate_Setup.zip.html' target='_blank'>( DỰ PHÒNG)</a>
+.table-nowrap td, .table-nowrap th {
+    white-space: nowrap;
+}
+.table-borderless>:not(caption)>*>* {
+    border-bottom-width: 0;
+}
+.table>:not(caption)>*>* {
+    padding: 0.75rem 0.75rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
 
-</p>
-<p style='text-align: center;'>
-  Visual Code ( cho win 7):
-  <a href='https://drive.google.com/file/d/1tJOUrx7GC51NP181n2HlJ-ZTTf3zyDDb/view' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>
-  CSM BOOT:
-  <a href='https://drive.google.com/file/d/1vBoJqQONu0NWsMoG2Q0IeYok5quEIko0/view' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>CSM CLIENT:
-  <a href='https://drive.google.com/file/d/1yiJALoLyatre2i5w2B6Mqk5k20Ax0VbT/view' target='_blank'>TẢI</a>
-  </p>
-<p style='text-align: center;'>
-  TMG 2010:
-  <a href='https://drive.google.com/file/d/130I2GufSsEzZVmv1fOFteH-HPUG5NJtm/view' target='_blank'>TẢI</a>
-</p>
-       <p style='text-align: center;'>
- Mdaemon Server 10.1:
-  <a href='https://apkadmin.com/3voki5lkfnb3/Mdaemon_Server_Full.zip.html' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>
-  WIN 7 PRO 32BIT:
-  <a href='https://drive.google.com/file/d/1ymXb60D0xAsVMNDAz-DinxmqeMDQVWbD/view' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>
-  WIN 7 PRO 64BIT:
-  <a href='https://drive.google.com/file/d/1f7Q2x9rFgElqrnuPQQF44AxfVnzqO402/view' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>
-  DOTNET 4.0 32+64BIT:
-  <a href='https://drive.google.com/file/d/1_vrtePeCennvnxKc1ShDLvH_lGw2y2Xo/view' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>
-  THÊM DRIVER VÀO USB:
-  <a href='https://drive.google.com/file/d/1EACOEp_mz3ekjbAvBjsruTsAi30ED5m6/view' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>
-  WAN DRIVER6 WIN7 64BIT:
-  <a href='https://drive.google.com/file/d/1J375kxstIE7Qa1_gBWxC92gQJp1Nh9a-/view' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>
-  WAN DRIVER6 WIN7 32 BIT:
-  <a href='https://drive.google.com/file/d/1lYddNHvBlzFawdFi79pPJ_y6V5hr1DYg/view' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>
-  WAN DRIVER7 WIN10 32BIT:
-  <a href='https://drive.google.com/file/d/1ZkXRyWgTHF6bfpO333S6d3OYYQ0qdi07/view' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>
-  WAN DRIVER7 WIN10 64BIT:
-  <a href='https://drive.google.com/file/d/1x_Racxl9DQFpmlLHmofK2wDLyDGGpE1h/view' target='_blank'>TẢI</a>
-</p>
-<p style='text-align: center;'>
-  OFFICE 2010:
-  <a href='https://drive.google.com/file/d/1tmaoOWedZJxC9tObXlIgYv53DwTqFbAU/view' target='_blank'>TẢI</a>
-</p>
+.avatar-sm {
+    height: 2rem;
+    width: 2rem;
+}
+.rounded-circle {
+    border-radius: 50%!important;
+}
+.me-2 {
+    margin-right: 0.5rem!important;
+}
+img, svg {
+    vertical-align: middle;
+}
 
+a {
+    color: #3b76e1;
+    text-decoration: none;
+}
 
-  
-<!--Start Please keep the Credits intact-->
-<div style='margin-top:30px; '>
-<center>
-<p class='author'>&#169; <b>2022</b> Make By<a href='#'> k90 </a></p></center></div>
+.badge-soft-danger {
+    color: #f56e6e !important;
+    background-color: rgba(245,110,110,.1);
+}
+.badge-soft-success {
+    color: #63ad6f !important;
+    background-color: rgba(99,173,111,.1);
+}
 
-<b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'/>
+.badge-soft-primary {
+    color: #3b76e1 !important;
+    background-color: rgba(59,118,225,.1);
+}
 
-<!-- End Please keep the Credits intact-->
+.badge-soft-info {
+    color: #57c9eb !important;
+    background-color: rgba(87,201,235,.1);
+}
+
+.avatar-title {
+    align-items: center;
+    background-color: #3b76e1;
+    color: #fff;
+    display: flex;
+    font-weight: 500;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+.bg-soft-primary {
+    background-color: rgba(59,118,225,.25)!important;
+}
+</style>
+
+<script type="text/javascript">
+
+</script>
+
+<script type="text/javascript" src="https://sites.google.com/site/bituotblog/disable-copy.js"></script>
+<style>
+body{
+-moz-user-select: none !important;
+-webkit-touch-callout: none!important;
+-webkit-user-select: none!important;
+-khtml-user-select: none!important;
+-moz-user-select: none!important;
+-ms-user-select: none!important;
+user-select: none!important;
+}
+</style>
+
+<script type='text/javascript'>
+$('body').on('contextmenu', 'https://www.facebook.com/ducnguyen5802/', function(e){ return false; });
+</script>
+
 </body>
 </html>
